@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7f2">
+    <meta name="description" content="Tu directorio de contactos, disponible incluso sin conexión.">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="assets/icons/pocketstore.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <title>PocketStore | Directorio</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="PocketStore, inicio">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none"><path d="M7 12.5h18l-1.4 13H8.4L7 12.5Z" fill="currentColor"/><path d="M11.5 13V9.5a4.5 4.5 0 0 1 9 0V13" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M12 18.5h8" stroke="#F5F7F2" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <span class="brand-name">pocket<span>store</span></span>
+        </a>
+        <div class="topbar-right">
+          <span class="sync-label"><span class="sync-dot" id="connection-dot"></span><span id="connection-label">Conectado</span></span>
+          <button class="icon-button" id="refresh-button" type="button" aria-label="Actualizar contactos" title="Actualizar contactos">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.4 8A6.5 6.5 0 0 0 4.7 5.7L3.5 7M3.5 7V3.8M3.5 7h3.2M3.6 12A6.5 6.5 0 0 0 15.3 14.3l1.2-1.3m0 0v3.2m0-3.2h-3.2"/></svg>
+          </button>
+          <div class="avatar avatar-small avatar-self" aria-label="Tu perfil">M</div>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <section class="page-heading" aria-labelledby="page-title">
+          <div>
+            <p class="eyebrow">TU ESPACIO, EN TODAS PARTES</p>
+            <h1 id="page-title">Directorio<span class="heading-period">.</span></h1>
+            <p class="page-subtitle">Personas importantes, siempre a mano.</p>
+          </div>
+          <div class="heading-note"><span class="note-icon" aria-hidden="true">✳</span><span>Guardado en<br>este dispositivo</span></div>
+        </section>
+
+        <section class="toolbar" aria-label="Controles del directorio">
+          <label class="search-box" for="search-input">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.8" cy="8.8" r="5.8"/><path d="m13.2 13.2 4 4"/></svg>
+            <input id="search-input" type="search" placeholder="Buscar personas..." autocomplete="off">
+            <kbd>/</kbd>
+          </label>
+          <div class="toolbar-actions">
+            <label class="select-wrap" aria-label="Filtrar por empresa">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 17h14M5 17V6l5-3 5 3v11M8 9h.1M12 9h.1M8 12h.1M12 12h.1"/></svg>
+              <select id="company-filter"><option value="all">Todas las empresas</option></select>
+            </label>
+            <label class="select-wrap sort-select" aria-label="Ordenar contactos">
+              <select id="sort-select"><option value="name">Nombre A–Z</option><option value="company">Empresa A–Z</option></select>
+              <svg class="chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5"/></svg>
+            </label>
+          </div>
+        </section>
+
+        <section class="directory-section" aria-labelledby="directory-title">
+          <div class="section-heading">
+            <div class="section-title-wrap"><h2 id="directory-title">Todos los contactos</h2><span class="count-badge" id="contact-count">—</span></div>
+            <span class="updated-label" id="updated-label">Preparando directorio...</span>
+          </div>
+          <div class="contact-list" id="contact-list" aria-live="polite" aria-busy="true">
+            <div class="loading-state"><span class="loading-spinner" aria-hidden="true"></span><span>Cargando tus contactos...</span></div>
+          </div>
+          <div class="empty-state" id="empty-state" hidden>
+            <span class="empty-mark" aria-hidden="true">⌕</span>
+            <h3>No encontramos a nadie</h3>
+            <p>Prueba con otro nombre o empresa.</p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <span><span class="footer-mark">p</span> PocketStore <span class="footer-separator">/</span> Tu directorio personal</span>
+        <span class="footer-status"><span class="footer-lock" aria-hidden="true">●</span> Tus datos permanecen en este dispositivo</span>
+      </footer>
+    </div>
+    <script src="app.js" defer></script>
+  </body>
+</html>

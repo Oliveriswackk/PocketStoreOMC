@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">
+  <title id="title">Flujo offline de PocketStore</title>
+  <desc id="desc">La aplicación descarga el directorio de la API y lo conserva en la caché para mostrarlo sin internet.</desc>
+  <rect width="960" height="300" rx="18" fill="#f5f7f2"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <rect x="48" y="82" width="220" height="136" rx="14" fill="#fff" stroke="#dce5dc" stroke-width="2"/>
+    <text x="158" y="130" fill="#2c745e" font-size="15" font-weight="700">01 / API</text>
+    <text x="158" y="160" fill="#202c28" font-size="20">JSONPlaceholder</text>
+    <text x="158" y="187" fill="#79827d" font-size="13">Contactos frescos</text>
+    <path d="M282 150h92m-12-12 12 12-12 12" fill="none" stroke="#e56c51" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <rect x="382" y="82" width="196" height="136" rx="14" fill="#e7f1eb" stroke="#b9d5c5" stroke-width="2"/>
+    <text x="480" y="130" fill="#2c745e" font-size="15" font-weight="700">02 / SERVICE WORKER</text>
+    <text x="480" y="160" fill="#202c28" font-size="20">Cache API</text>
+    <text x="480" y="187" fill="#62736a" font-size="13">Shell + respuesta API</text>
+    <path d="M592 150h92m-12-12 12 12-12 12" fill="none" stroke="#e56c51" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <rect x="692" y="82" width="220" height="136" rx="14" fill="#fff" stroke="#dce5dc" stroke-width="2"/>
+    <text x="802" y="130" fill="#2c745e" font-size="15" font-weight="700">03 / OFFLINE</text>
+    <text x="802" y="160" fill="#202c28" font-size="20">PocketStore</text>
+    <text x="802" y="187" fill="#79827d" font-size="13">Directorio disponible</text>
+    <text x="480" y="263" fill="#79827d" font-size="12">Primera visita online para instalar y guardar datos; siguientes visitas, también sin conexión.</text>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+{
+  "name": "PocketStore - Directorio personal",
+  "short_name": "PocketStore",
+  "description": "Tu directorio de contactos, disponible incluso sin conexión.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f7f2",
+  "theme_color": "#f5f7f2",
+  "icons": [
+    {
+      "src": "assets/icons/pocketstore.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
